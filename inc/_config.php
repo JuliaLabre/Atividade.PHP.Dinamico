@@ -11,11 +11,13 @@ date_default_timezone_set('America/Sao_Paulo');
  **************************************/
 $page_title = '';                           // Título dinâmico da página:
 $page_content = '';                         // Conteúdo dinâmico da página:
-$site_name = 'PHP.inc.DB';                  // Nome do site:
-$site_slogan = 'Só um site dinâmico...';    // Slogan do site:
+$site_name = 'Bloguizices';                  // Nome do site:
+$site_slogan = 'Só mais um monte de blá blá';    // Slogan do site:
 $tag_title = $site_name;                    // Formato da tag <title>:
 $site_year = 2022;                          // Ano de lançamento do site:
 $copyright = "&copy; {$site_year} ";        // Mensagem de Copyright no rodapé:
+$site_logo = '../img/logo.png';
+$site_favicon ='../img/logo.png';
 
 /***************************************************
  * Configurações de acesso ao banco de dados MySQL *
@@ -25,7 +27,7 @@ $copyright = "&copy; {$site_year} ";        // Mensagem de Copyright no rodapé:
  * Se no endereço do site temos a palavra 'localhost', provavelmente estamos
  * usando o XAMPP...
  **/
-if (str_contains($_SERVER['SERVER_NAME'], 'localhost')) :
+if (strpos($_SERVER['SERVER_NAME'], 'localhost') >= 0) :
 
     // Configurações de acesso ao banco de dados usando o XAMPP:
     $hostname = 'localhost';    // Endereço do servidor MySQL:

@@ -8,7 +8,36 @@ require($_SERVER['DOCUMENT_ROOT'] . '/inc/_config.php');
  ***********************************************/
 
 // Define o título da página:
-$page_title = 'Sobre...';
+$page_title = 'Quem somos';
+
+// query para obter o artigo mais recente do site:
+$sql = "
+
+SELECT aid, title, thumbnail, resume
+FROM articles
+    WHERE astatus = 'online'
+    AND adate <= NOW()
+ORDER by adate DESC
+LIMIT 1;
+
+";
+$content='';
+
+// Executa query e armazena em '$res':
+$res = $conn->query($sql);
+
+$art = $res->fetch_assoc();
+ 
+$content .= <<<HTML
+
+<div class="artbox" onclick="location.href='/view/?{$art['aid']}'">
+    <img src="{$art['thumbnail']}" alt="{$art['title']}">
+    <h3>{$art['title']}</h3>
+    <div>{$art['resume']}</div>
+</div>
+
+HTML;
+
 
 /**************************************************************
  * Define o conteúdo "visual" da página:                      *
@@ -20,16 +49,17 @@ $page_content = <<<HTML
 <article>
 
     <h2>{$page_title}</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, sint sequi nam tempora quis doloremque cupiditate eos quaerat nulla laudantium perspiciatis. Nisi esse commodi ipsam nostrum fuga omnis iure quos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi laudantium maxime voluptatibus quia deserunt voluptatum delectus odit consequatur, eligendi reiciendis nulla quas laborum rerum mollitia, voluptatem sequi velit omnis.</p>
+    <p>Uma equipe de uma mulher só! <br>
+       Além de técnica em contabilidade, esposa, mãe, filha, irmã, flamenguista... 
+       Agora uma estudante de programação web tentando entender como criar esses sites incríveis e explorar algumas possibilidades.</p>
+    <img src="../img/sobre.webp">
 
 </article>
 
 <aside>
 
-    <h3>Conteúdo complementar</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint incidunt assumenda, ab dignissimos illum.</p>
-
+    <h3>Conheça nosso artigo mais recente:</h3>
+   {$content}
 </aside>
 
 HTML;

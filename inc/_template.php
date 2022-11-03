@@ -24,8 +24,12 @@ else                                        // Se o ano atual é o ano do site..
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo $site_favicon ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title><?php echo $tag_title ?></title>
+
+    
 </head>
 
 <body>
@@ -33,18 +37,27 @@ else                                        // Se o ano atual é o ano do site..
     <div id="wrap">
 
         <header>
-            <h1 onclick="location.href='/'"><?php echo $site_name ?></h1>
+            <a href="/">
+            <img src=<?php echo $site_logo ?>>
+            </a>
+
+            <h1 onclick="location.href='/'"><?php echo $site_name ?>
+            <span onclick="location.href='/'"><?php echo $site_slogan ?></span>
+            </h1>
         </header>
 
+    <hr>
         <nav>
             <a href="/">Início</a>
             <a href="/contacts">Contatos</a>
             <a href="/about">Sobre</a>
         </nav>
-
+    <hr>
         <main><?php echo $page_content ?></main>
 
 <footer>
+    <br>
+    <hr>
     <div><?php echo $copyright ?><br></div>
     <small><a href="/policies">Políticas de privacidade</a></small>
 </footer>

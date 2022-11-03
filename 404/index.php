@@ -13,8 +13,9 @@ $page_title = 'Erro 404';
 // Define o conteúdo da página:
 $page_content = <<<HTML
 
-<h2>Oooops!</h2>
-<p>O conteúdo que você está tentando acessar não está disponível ou não existe...</p>
+<img src="../img/404.webp" width="350px">
+<p>A página solicitada não existe ou está indisponível no momento...</p>
+<a href="/">Fuja do monstro!!</a>
 
 HTML;
 

@@ -20,15 +20,22 @@ $page_content = <<<HTML
 <article>
 
     <h2>{$page_title}</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, sint sequi nam tempora quis doloremque cupiditate eos quaerat nulla laudantium perspiciatis. Nisi esse commodi ipsam nostrum fuga omnis iure quos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi laudantium maxime voluptatibus quia deserunt voluptatum delectus odit consequatur, eligendi reiciendis nulla quas laborum rerum mollitia, voluptatem sequi velit omnis.</p>
+    <form>
+  <label for="name">Nome:</label>
+  <input type="text" id="name"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email"><br><br>
+  <label for="mesage">Fale Conosco:</label><br>
+  <textarea id="mesage" rows="4" cols="50" placeholder="Digite sua mensagem aqui..."></textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
 
 </article>
 
 <aside>
-
-    <h3>Conteúdo complementar</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint incidunt assumenda, ab dignissimos illum.</p>
+<br>
+    <a href="../about">Conheça um pouco mais sobre nós...</a>
 
 </aside>
 
