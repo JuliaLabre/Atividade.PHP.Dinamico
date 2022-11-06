@@ -46,20 +46,17 @@ else                                        // Se o ano atual é o ano do site..
             </h1>
         </header>
 
-    <hr>
+
         <nav>
-            <a href="/">Início</a>
-            <a href="/contacts">Contatos</a>
-            <a href="/about">Sobre</a>
+            <a href="/"><i class="fa-solid fa-house"></i>Início</a>
+            <a href="/contacts"><i class="fa-solid fa-square-phone"></i>Contatos</a>
+            <a href="/about"><i class="fa-solid fa-circle-question"></i>Sobre</a>
         </nav>
-    <hr>
         <main><?php echo $page_content ?></main>
 
 <footer>
-    <br>
-    <hr>
     <div><?php echo $copyright ?><br></div>
-    <small><a href="/policies">Políticas de privacidade</a></small>
+    <small><a href="/policies"><i class="fa-solid fa-lock"></i>Políticas de privacidade</a></small>
 </footer>
 
 </div>

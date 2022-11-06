@@ -3,38 +3,136 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
 
+/***********************
+ * Reset geral do tema *
+ ***********************/
+
+/* Todos os elementos */
+* {
+    /* Tamanho do elemento é definido pelas bordas */
+    box-sizing: border-box;
+  
+    /* Remove serrilhado ao redor de imagens e links selecionados */
+    outline: none;
+  }
+  
+  /* Elementos "root" (raiz) */
+  html,
+  body {
+    /* Tamanho e posicionamento */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  
+    /* Fonte padrão do site, usando a fonte "Lato" do Google Fonts */
+    font-family: "Lato", sans-serif;
+  
+    /* Tamanho da fonte padrão → 1rem = 16px */
+    font-size: 16px;
+  
+    /* Cor da fonte padrão */
+    color: #7b3608;
+  }
+  
+  /* Links */
+  a {
+    color: #9b7561;
+    text-decoration: none;
+  }
+  
+  /* Ao passar o mouse sobre um link, usando a pseudo classe ":hover" */
+  a:hover {
+    color: #ee6910;
+    text-decoration: none;
+  }
+
+  #wrap{
+    background-color:#d0b1a1;
+  }
+
 header {
    display:inline-flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-items: center;
+    
    
 
 }
 header img{
     width: 100px;
-    border-radius: 70px;
-    margin: 10px;
-    margin-top: 20px;
-}
+    border-radius: 6rem;
+    margin: 1rem;
+    margin-top: 1.5rem;
+    }
 
 header h1 {
-    font-size: 24px;
+    font-size: 1.8rem;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background: -webkit-linear-gradient(#fce4d4,#7b3608,#9b7561,#ee6910);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h1 span{
-    font-size: 10px;
+    font-size: .7rem;
     margin: 0;
+    font-style: italic;
 }
 
-nav a {
-    text-align: center;
-    text-decoration: none;
-}
+nav i {
+  margin: .3rem;
+    }
+
 nav {
-    padding: 5px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color:  #fce4d4;
+}  
+/* main {
+    border: .5rem;
+    border-style:groove;
+} */
+.artbox, aside {
+    background-color: #fce4d4;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .6rem 3rem;
+    cursor: pointer;
+    
+   }
+h2 {
+    font-size: 2rem;
+    text-align: center;
 }
+
+footer {
+    background-color:#fce4d4;
+    text-align: center;
+}
+footer i {
+    margin: .3rem;
+}
+
+
+@media (min-width: 575px) {
+    main {
+    display:flex; 
+    flex-direction: column; 
+    }
+    article {
+        flex-direction: row;
+        flex-grow: 1;
+
+    }
+    
+}
+
 
 

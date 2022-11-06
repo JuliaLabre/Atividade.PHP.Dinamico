@@ -16,8 +16,8 @@ $site_slogan = 'Só mais um monte de blá blá';    // Slogan do site:
 $tag_title = $site_name;                    // Formato da tag <title>:
 $site_year = 2022;                          // Ano de lançamento do site:
 $copyright = "&copy; {$site_year} ";        // Mensagem de Copyright no rodapé:
-$site_logo = '../img/logo.png';
-$site_favicon ='../img/logo.png';
+$site_logo = '../img/logo.jpg';
+$site_favicon ='../img/logo.jpg';
 
 /***************************************************
  * Configurações de acesso ao banco de dados MySQL *

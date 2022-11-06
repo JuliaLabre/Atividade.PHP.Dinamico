@@ -65,7 +65,7 @@ $page_content = <<<HTML
 </article>
 
 <aside>
-    Conteúdo complementar...
+   Sobre os autores...
 </aside>
 
 HTML;
